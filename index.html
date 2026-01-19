@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Три рецепта буженины</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .recipe-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .classic::before {
+            background: linear-gradient(90deg, #8B4513, #A0522D);
+        }
+
+        .spicy::before {
+            background: linear-gradient(90deg, #8B0000, #B22222);
+        }
+
+        .herb::before {
+            background: linear-gradient(90deg, #228B22, #32CD32);
+        }
+
+        .recipe-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .ingredients, .instructions {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #34495e;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .time {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .recipes {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .recipe-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .recipe-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Три рецепта буженины</h1>
+            <p class="subtitle">Классический, острый и с травами — выберите свой идеальный вариант приготовления</p>
+        </header>
+
+        <div class="recipes">
+            <div class="recipe-card classic">
+                <h2 class="recipe-title">Классическая буженина</h2>
+                
+                <div class="ingredients">
+                    <h3 class="section-title">Ингредиенты</h3>
+                    <ul>
+                        <li>Свиная вырезка — 1.5 кг</li>
+                        <li>Чеснок — 6 зубчиков</li>
+                        <li>Соль — 2 ст. ложки</li>
+                        <li>Чёрный перец горошком — 1 ст. ложка</li>
+                        <li>Лавровый лист — 3 шт</li>
+                        <li>Растительное масло — 2 ст. ложки</li>
+                    </ul>
+                </div>
+
+                <div class="instructions">
+                    <h3 class="section-title">Приготовление</h3>
+                    <ul>
+                        <li>Сделайте надрезы в мясе и вставьте дольки чеснока</li>
+                        <li>Натрите мясо солью, перцем и измельчённым лавровым листом</li>
+                        <li>Замаринуйте на 12 часов в холодильнике</li>
+                        <li>Заверните в фольгу и запекайте 2 часа при 180°C</li>
+                        <li>Снимите фольгу и запекайте ещё 30 минут до румяной корочки</li>
+                    </ul>
+                </div>
+                
+                <span class="time">Время приготовления: 14 часов</span>
+            </div>
+
+            <div class="recipe-card spicy">
+                <h2 class="recipe-title">Острая буженина</h2>
+                
+                <div class="ingredients">
+                    <h3 class="section-title">Ингредиенты</h3>
+                    <ul>
+                        <li>Свиная шея — 1.8 кг</li>
+                        <li>Острый перец чили — 2 шт</li>
+                        <li>Паприка копчёная — 1 ст. ложка</li>
+                        <li>Кориандр молотый — 1 ч. ложка</li>
+                        <li>Соевый соус — 3 ст. ложки</li>
+                        <li>Мёд — 2 ст. ложки</li>
+                        <li>Имбирь свежий — 2 см</li>
+                    </ul>
+                </div>
+
+                <div class="instructions">
+                    <h3 class="section-title">Приготовление</h3>
+                    <ul>
+                        <li>Измельчите чили, имбирь и чеснок в пасту</li>
+                        <li>Смешайте с соевым соусом, мёдом и специями</li>
+                        <li>Натрите мясо маринадом и оставьте на 24 часа</li>
+                        <li>Запекайте в рукаве 2.5 часа при 160°C</li>
+                        <li>Дайте остыть в собственном соку для сочности</li>
+                    </ul>
+                </div>
+                
+                <span class="time">Время приготовления: 26 часов</span>
+            </div>
+
+            <div class="recipe-card herb">
+                <h2 class="recipe-title">Буженина с травами</h2>
+                
+                <div class="ingredients">
+                    <h3 class="section-title">Ингредиенты</h3>
+                    <ul>
+                        <li>Свиная корейка — 2 кг</li>
+                        <li>Свежий розмарин — 4 веточки</li>
+                        <li>Тимьян — 2 ст. ложки</li>
+                        <li>Чеснок — 8 зубчиков</li>
+                        <li>Оливковое масло — 3 ст. ложки</li>
+                        <li>Горчица дижонская — 2 ст. ложки</li>
+                        <li>Цедра апельсина — от 1 шт</li>
+                    </ul>
+                </div>
+
+                <div class="instructions">
+                    <h3 class="section-title">Приготовление</h3>
+                    <ul>
+                        <li>Сделайте кармашки в мясе и вложите веточки розмарина</li>
+                        <li>Смешайте горчицу, масло, тимьян, цедру и чеснок</li>
+                        <li>Обмажьте мясо смесью и маринуйте 8 часов</li>
+                        <li>Запекайте открытым 3 часа при 150°C</li>
+                        <li>Перед подачей дайте настояться 1 час</li>
+                    </ul>
+                </div>
+                
+                <span class="time">Время приготовления: 12 часов</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
